@@ -16,7 +16,7 @@ Our motivation is to distinguish high-quality and low-quality pixels through wei
 
 # Why does the PWHSI denoising framework work?
 Pixel weighting mainly affects the iteration variables $\mathcal{T}$.  
-$${{\mathcal{T}}^{t+1}}={{\left( {(\mathcal{W}{^{t}})}^{2}+\rho \cdot \mathfrak{T} \right)}^{\dagger }}\left( {(\mathcal{W}{^{t}})}^{2}\odot \mathcal{Y}+\rho \cdot {{\mathcal{R}}^{t}}{{\times }_{3}}{{\mathbf{E}}^{t}} \right),$$  
+![image](https://github.com/xuelin-xie/PWNLSR/blob/main/image/eq3.png)  
 Without pixel weighting, all weight values default to 1, failing to dynamically and effectively balance the contributions of the noisy and restored images. By introducing pixel weighting, the auxiliary variables are more accurately estimated, thereby enhancing the performance of subsequent subspace decomposition and non-local mean operations.
 
 # Experiments
