@@ -10,9 +10,9 @@ Our motivation is to distinguish high-quality and low-quality pixels through wei
 
 # Contents 
 1. Pixel-Weighted HSI (PWHSI) denoising framework:  
-$$& \underset{\mathcal{W},\mathcal{X}}{\mathop{min}}\,\underbrace{\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2}}_{\text{Fidelity term}} + \hspace{0.2em} \lambda \hspace{-0.3em} \underbrace{R(\mathcal{X})}_{\text{Prior term}}+ \hspace{0.2em} \mu \hspace{-0.6em} \underbrace{R(\mathcal{W})}_{\text{Weight prior}},$$  
+$$ & \underset{\mathcal{W},\mathcal{X}}{\mathop{min}}\,\underbrace{\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2}}_{\text{Fidelity term}} + \hspace{0.2em} \lambda \hspace{-0.3em} \underbrace{R(\mathcal{X})}_{\text{Prior term}}+ \hspace{0.2em} \mu \hspace{-0.6em} \underbrace{R(\mathcal{W})}_{\text{Weight prior}},$$  
 2. PWNLSR model:  
-$$& \underset{\mathbf{E},\mathcal{R},\mathcal{W}}{\mathop{min}}\,\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2}+\lambda {{\left\| \mathcal{R} \right\|}_{NL}}+ \mu {\left\|\mathfrak{T}- \mathcal{W}\right\|_0} \notag \\
+$$ & \underset{\mathbf{E},\mathcal{R},\mathcal{W}}{\mathop{min}}\,\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2}+\lambda {{\left\| \mathcal{R} \right\|}_{NL}}+ \mu {\left\|\mathfrak{T}- \mathcal{W}\right\|_0} \notag \\
 & \text{s.t.} \hspace{0.3em}  \mathbf{E}^{\top}\mathbf{E}=\mathbf{I}, \mathcal{X}=\mathcal{R}{{\times }_{3}}\mathbf{E}, and \hspace{0.3em}  {{\mathcal{W}}_{i,j,k}}\in \{0,1\},$$
 
 # Why does the PWHSI denoising framework work?
@@ -34,9 +34,11 @@ Without pixel weighting, all weight values default to 1, failing to dynamically 
 %   10. TPTV,                     2023  TGRS  
 %   11. 3DCTV-RPCA,               2023  TPAMI  
 %   12. Ours (PWNLSR)  
+
 API of all methods are list in "demo_PWNLSR.m"   
 Run   "demo_PWNLSR.m"  to test the code for all simulation experiments.  
 Run   "Real_demo.m"   to test the code with all real data.  
+
 Theoretically, the pixel-weighted HSI (PWHSI) denoising framework can handle various types of noise, and may be more effective for impulse noise (See our code for more explorations). However, limited by the combination of NL and SR, the PWNLSR method is not particularly good at handling impulse noise or heavy stripe noise.  
 
 # Contact
