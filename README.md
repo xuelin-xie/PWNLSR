@@ -1,5 +1,5 @@
 # Remark
-***<font color="red">codes will be uploaded after the paper is accepted.</font>***
+<font color="red">***Codes will be uploaded after the paper is accepted.***</font>
 
 # PWNLSR
 This is the matlab code of paper "Pixel-Weighted Nonlocal Low-Rank Subspace Representation for Hyperspectral Image Denoising".
@@ -41,7 +41,7 @@ Run   "Real_demo.m"   to test the code with all real data.
 Theoretically, the pixel-weighted HSI (PWHSI) denoising framework can handle various types of noise, and may be more effective for impulse noise (See our code for more explorations). However, limited by the combination of NL and SR, the PWNLSR method is not particularly good at handling impulse noise or heavy stripe noise.  
 
 # How to cite
-If you use the code, please cite our papers: "Pixel-Weighted Nonlocal Low-Rank Subspace Representation for Hyperspectral Image Denoising. Xuelin Xie, Xiliang Lu, Zhengshan Wang, Long Chen, ..."
+If you use the code, please cite our papers: "Pixel-Weighted Nonlocal Low-Rank Subspace Representation for Hyperspectral Image Denoising. ..."
 
 # Contact
 If you find any bug or have any questions, please contact Xuelin Xie ( xl.xie@whu.edu.cn).
