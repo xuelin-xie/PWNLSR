@@ -6,14 +6,14 @@ This is the matlab code of paper "Pixel-Weighted Nonlocal Low-Rank Subspace Repr
 
 # Introduction
 Our motivation is to distinguish high-quality and low-quality pixels through weight tensors.  
-[Flowchart](https://<username>.github.io/<repository>/Flowchart.pdf)
+[Flowchart](https://github.com/xuelin-xie/PWNLSR/blob/main/Flowchart.pdf)
 
 # Contents 
 1. Pixel-Weighted HSI (PWHSI) denoising framework:  
-$$ \underset{\mathcal{W},\mathcal{X}}{\mathop{min}}\,\underbrace{\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2}}_{\text{Fidelity term}} + \lambda \underbrace{R(\mathcal{X})}_{\text{Prior term}} + \mu \underbrace{R(\mathcal{W})}_{\text{Weight prior}}. $$  
+$$ {\underset{\mathcal{W},\mathcal{X}}{\mathop{min}}\,\underbrace{\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2}}_{\text{Fidelity term}} + \lambda \underbrace{R(\mathcal{X})}_{\text{Prior term}} + \mu \underbrace{R(\mathcal{W})}_{\text{Weight prior}}.} $$  
 2. PWNLSR model:  
-$$ \underset{\mathbf{E},\mathcal{R},\mathcal{W}}{\mathop{min}}\,\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2} + \lambda \left\| \mathcal{R} \right\|_{NL} + \mu \left\|\mathfrak{T}- \mathcal{W}\right\|_0 \\
-\text{s.t.} \quad  \mathbf{E}^{\top}\mathbf{E}=\mathbf{I}, \quad \mathcal{X}=\mathcal{R}{{\times }_{3}}\mathbf{E}, \quad {{\mathcal{W}}_{i,j,k}}\in \{0,1\}. $$
+$$ {\underset{\mathbf{E},\mathcal{R},\mathcal{W}}{\mathop{min}}\,\left\| \mathcal{W}\odot \left( \mathcal{Y}- \mathcal{X} \right) \right\|_{F}^{2} + \lambda \left\| \mathcal{R} \right\|_{NL} + \mu \left\|\mathfrak{T}- \mathcal{W}\right\|_0 \\
+\text{s.t.} \quad  \mathbf{E}^{\top}\mathbf{E}=\mathbf{I}, \quad \mathcal{X}=\mathcal{R}{{\times }_{3}}\mathbf{E}, \quad {{\mathcal{W}}_{i,j,k}}\in \{0,1\}.} $$
 
 # Why does the PWHSI denoising framework work?
 Pixel weighting mainly affects the iteration variables $\mathcal{T}$.  
